@@ -79,3 +79,7 @@ The program was run in IntelliJ IDEA to verify that the operations produced the 
 ## Conclusion
 
 The implementation demonstrated how Python lists could be used to manage changing collections of data. The testing showed that insertion and deletion can require elements to shift, while searching may require checking elements sequentially. The edge-case tests also demonstrated the importance of validating operations before modifying a list.
+
+## GitHub Repository
+
+[Unit 3 - List Operations](https://github.com/robemaru/cmsc315-oop-fundamentals/tree/main/Unit3)
