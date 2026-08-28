@@ -76,6 +76,9 @@ I tested the following operations:
 
 The program was run in IntelliJ IDEA to verify that the operations produced the expected results.
 
+## Linked List vs. Array-Based List Performance
+An array-based list stores elements in a contiguous block of memory, allowing for fast O(1) random access but making insertions or deletions near the head a costly O(n) operation due to element shifting. Conversely, a linked list would easily outperform an array-based list during frequent insertions or deletions at the beginning of the collection. Because linked list nodes are dynamically allocated and connected via pointers, elements can be added or removed at the front in absolute O(1) constant time simply by updating reference addresses without shifting any underlying data blocks.
+
 ## Conclusion
 
 The implementation demonstrated how Python lists could be used to manage changing collections of data. The testing showed that insertion and deletion can require elements to shift, while searching may require checking elements sequentially. The edge-case tests also demonstrated the importance of validating operations before modifying a list.
