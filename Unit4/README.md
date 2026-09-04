@@ -1,42 +1,46 @@
-Unit 4 Discussion: Binary Search Trees
-Overview
-This assignment introduced Binary Search Trees (BSTs) and recursive tree operations.
+# Unit 4 Discussion: Binary Search Trees
 
-Learning Objectives
+## Overview
+This assignment introduced Binary Search Trees (BSTs) and recursive tree operations. The program demonstrates how a tree structures numerical keys hierarchically and searches for records efficiently.
+
+## Learning Objectives
 I completed the following learning objectives:
+* **Built a BST:** Developed structural rules to organize incoming data dynamically.
+* **Recursive Operations:** Implemented recursive patterns for clean node insertion and value searching.
+* **In-Order Traversal:** Traversed the tree paths to display sorted data sequences.
+* **Efficiency Analysis:** Analyzed how tree balancing impacts algorithmic runtime constraints.
 
-Built a BST.
-Inserted values recursively.
-Searched for values recursively.
-Performed an in-order traversal.
-Explained how BST organization affects efficiency.
-Implementation
-I created a Node class to store each value and references to its left and right children. I created a BST class with a root reference and implemented recursive insertion, recursive searching, and in-order traversal.
+## Design Approach
+I created a Node class to store each unique value alongside pointers to its left and right children. The core tree structures utilize three primary functions:
+* `insert()` — inserts a value recursively into its correct logical subtree location.
+* `search()` — searches the tree for a specific key, eliminating half the paths at each step.
+* `in_order_traversal()` — visits the left subtree, current node, and right tree to output keys in ascending order.
 
-During insertion, values smaller than the current node were placed in the left subtree, while larger values were placed in the right subtree. Duplicate employee IDs were ignored because employee IDs should be unique.
+## Implementation Details
 
-The search operation used the same ordering. Each comparison allowed the program to continue only into the subtree where the requested value could exist. A balanced BST can provide average O(log n) search and insertion performance, while a highly unbalanced BST can become O(n).
+### Node Insertion
+During insertion, values smaller than the current node are placed into the left subtree, while larger values are placed in the right subtree. Duplicate employee IDs are explicitly ignored because employee keys must remain unique.
 
-In-Order Traversal
-I used in-order traversal by visiting the left subtree, the current node, and then the right subtree. Because of the BST ordering rule, this produced the employee IDs in ascending order.
+### Value Search
+The search operation uses the same tree-ordering logic. Each comparison allows the program to skip half of the remaining nodes. A balanced BST provides an average search performance of `O(log n)`, while a highly unbalanced tree can degrade to `O(n)`.
 
-Real-World Example
-I used employee records organized by employee ID as the real-world scenario. Employee IDs can be used as numeric keys in a BST. When searching for an employee, the program compares the requested ID with the current ID and chooses the left or right subtree. This reduces the number of records that need to be considered when the tree is reasonably balanced.
+### Real-World Example
+I used employee records organized by employee ID as the real-world scenario. Employee IDs serve as numeric keys. When searching for a record, the program compares the target ID with the current node ID, choosing the left or right path to instantly bypass irrelevant records.
 
-Testing and Edge Cases
-I tested:
+## Testing and Edge Cases
+I verified the stability of the implementation using the following edge cases:
+* Multiple employee IDs in both left and right subtrees.
+* Searching for existing and non-existent employee IDs.
+* Traversing an completely empty tree environment.
+* Attempting to insert a duplicate employee ID.
+* Verifying tree operations on a single-node configuration.
 
-Multiple employee IDs in both left and right subtrees.
-Two existing employee IDs.
-Two missing employee IDs.
-An empty tree traversal.
-Searching an empty tree.
-A duplicate employee ID.
-A single-node tree.
-The tests showed that the BST handled normal operations and edge cases without errors.
+## Discussion Board Reflection
+Completing this assignment helped me understand how a Binary Search Tree organizes values efficiently. A major challenge was tracking how recursion updates root node references when a new element is added. I overcame this by drawing out the execution stacks step by step. 
 
-Discussion Board Reflection
-Completing this assignment helped me understand how a Binary Search Tree organizes values by placing smaller values on the left and larger values on the right. I practiced recursive insertion, recursive searching, and in-order traversal. I also learned why an in-order traversal of a BST produces values in sorted order. One challenge was understanding how recursion returns an updated node reference when a new value is inserted. I overcame this by following each comparison from the root and tracing whether the value belonged in the left or right subtree. I also tested edge cases, including an empty tree, a duplicate employee ID, and a single-node tree. For my real-world example, I used employee records organized by employee ID. A BST can make searching efficient because each comparison can eliminate part of the tree. In a balanced BST, search and insertion are typically O(log n), which is more efficient than a linear search that may require O(n) comparisons. However, if the BST becomes highly unbalanced, its performance can become O(n).
+A BST makes searching significantly faster than a linear search because each comparison eliminates a massive chunk of the data pool. In a balanced state, its `O(log n)` performance scales beautifully for massive enterprise database deployments.
 
-GitHub Repository
-https://github.com/robemaru/cmsc315-oop-fundamentals
+---
+
+## GitHub Repository
+* [My OOP Fundamentals Repository](https://github.com)
