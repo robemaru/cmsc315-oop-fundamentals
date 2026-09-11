@@ -51,3 +51,8 @@ Completing this assignment helped me better understand how search algorithms aff
 One challenge I encountered was understanding how binary search changes the search range after each comparison. I overcame this by breaking the algorithm into smaller steps and using variables for the left, middle, and right positions. Testing edge cases such as an empty list, a single-item list, and values that were not found also helped me make the algorithms more reliable.
 
 Linear search is useful when a dataset is small or unsorted because it is simple and does not require preprocessing. Binary search is a better choice when working with a large, sorted dataset because it eliminates half of the remaining search area with each comparison. The main trade-off is that the data must remain sorted, which can require additional work when data changes frequently.
+
+## GitHub Repository 
+https://github.com/robemaru/cmsc315-oop-fundamentals/edit/main/Unit5
+
+
