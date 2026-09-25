@@ -70,4 +70,4 @@ Execute the testing and performance evaluation suite directly via your terminal:
 ```bash
 python unit_7_discussion.py
 ```
-## GitHub Repository: 
+## GitHub Repository: https://github.com/robemaru/cmsc315-oop-fundamentals/tree/main/Unit7
